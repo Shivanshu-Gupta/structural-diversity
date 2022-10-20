@@ -1,0 +1,4 @@
+allennlp
+python-dotenv
+comet_ml
+pika
