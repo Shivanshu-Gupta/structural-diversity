@@ -6,7 +6,7 @@ app = typer.Typer()
 @app.command()
 def main(
         dataset: str = 'covr', split_type: str = 'iid;template',
-        subsample_type: str = 'depst;subtree-depst', only_incomplete: bool = False,
+        subsample_type: str = 'template;subtree', only_incomplete: bool = False,
         subsample_gen: bool = True, train: bool = True,
         node: str = '', n_gpus: int = 8, n_jobs_per_gpu: int = 1,
         outfile: Path = "slurm_script.sh"):

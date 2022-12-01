@@ -16,7 +16,7 @@ class SubsampleParams(Parameters):
     n_trn: int = 100
     seed: int = 0
     anon: bool = False
-    compound: str = None # None or 'ngram' or 'subtree' or 'depst' or 'template'
+    compound: str = None # None or 'ngram' or 'subtree' or 'template'
     min_freq: int = 1
 
     # subtree params
@@ -33,7 +33,7 @@ class SubsampleParams(Parameters):
         name_parts = []
         if self.anon: name_parts.append('anon')
         # name_parts.append(self.compound)
-        assert self.compound in [None, 'ngram', 'template', 'subtree', 'depst', 'subtree-depst']
+        assert self.compound in [None, 'ngram', 'template', 'subtree']
         if self.compound == 'subtree' or self.compound == 'depst':
             name_parts.append(self.compound)
             if self.context_type:
@@ -61,7 +61,7 @@ class SubsampleParams(Parameters):
         name_parts = []
         if self.anon: name_parts.append('anon')
         # name_parts.append(self.compound)
-        assert self.compound in [None, 'ngram', 'template', 'subtree', 'depst', 'subtree-depst']
+        assert self.compound in [None, 'ngram', 'template', 'subtree']
         if self.compound == 'subtree' or self.compound == 'depst':
             name_parts.append(self.compound)
             if self.context_type:

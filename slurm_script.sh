@@ -10,4 +10,4 @@
 #SBATCH --output=outputs/slurm.%j.out
 #SBATCH --error=outputs/slurm.%j.err
 
-srun python -m experiments.parallel_driver exp-1 final0 --dataset "covr" --split-type "iid;template" --subsample-type "depst;subtree-depst" --n-gpus 8 --n-jobs-per-gpu 1 --train
+srun python -m experiments.parallel_driver exp-1 final0 --dataset "covr" --split-type "iid;template" --subsample-type "template;subtree" --n-gpus 8 --n-jobs-per-gpu 1 --train

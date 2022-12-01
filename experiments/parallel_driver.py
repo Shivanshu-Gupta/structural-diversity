@@ -116,7 +116,7 @@ def exp_1(
     dataset = get_vals(dataset, str, ['covr', 'atis', 'overnight', 'thingtalk', 'smcalflow-uncommon'])
     split_type = get_vals(split_type, str, ['iid', 'template', 'subtree'])
     split_seed = get_vals(split_seed, int, range(4))
-    subsample_type = get_vals(subsample_type, str, ['random', 'ngram', 'template', 'subtree', 'depst', 'subtree-depst'])
+    subsample_type = get_vals(subsample_type, str, ['random', 'ngram', 'template', 'subtree'])
     params_l = get_subsample_params(dataset, split_type, split_seed, subsample_type)
     model_name = 'bart'
 
